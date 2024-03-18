@@ -1,0 +1,169 @@
+/*
+Before the flexbox layout module, there were four layout modes
+-block, for section in a webpage
+-inline, for text
+-table, 2D table data
+-positioned, explicit position in a webpage
+
+
+Flexbox Container:
+Parent Element (Container) -
+*/
+.heart {
+    display: flex;
+    /*flex-direction: column;*/
+    /* flex-flow is a property to set both row and wrap */
+    flex-flow: row wrap;
+    /* center, flex-start, flex-end,
+    space-around (divide the space by number of children and center them in each child
+    ,space-between (divide the thing by number of children - 1, and place each child on an edge
+     */
+
+    /* justify-content: align flex items along main axis; if flex=row, means horiztonally aligned
+       align-items: align items cross axis,flex-start, baseline (aligns the flex items based on their text baseline)
+     */
+    /*  This property aligns a flex container's lines within the flex container when there is extra space in the cross-axis.
+        This property only takes effect on multi-line flexible containers, where `flex-wrap` is either `wrap` or `wrap-reverse
+     */
+    justify-content: center;
+    background-color: cornflowerblue;
+}
+
+.heart > div {
+    /*
+    order
+    flex-grow
+    flex-shrink
+    flex-basis
+    flex
+    align-self
+     */
+    text-align: center;
+    background-color: #f1f1f1;
+    width: 100px;
+    line-height: 75px;
+    margin: 10px;
+
+}
+
+.hhh {
+    display: flex;
+    background-color: lightsalmon;
+    height: 400px;
+    justify-content: center;
+    align-items: baseline;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.hhh > div {
+    text-align: center;
+    background-color: #f1f1f1;
+    width: 100px;
+    height: 100px;
+    line-height: 75px;
+    margin: 10px;
+}
+
+.blah {
+    display: flex;
+    background-color: #f1f1f1;
+
+}
+
+.blah > div {
+    background-color: DodgerBlue;
+    color: white;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    /*The align-self property overrides */
+    /*the align-items property of the container.*/
+    align-self: center;
+}
+
+.grid-container {
+    /*grid is block level, while inline-grid is another level*/
+    display: grid;
+    background-color: #2196F3;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    /*gap: rowpx colpx;*/
+    row-gap: 10px;
+    column-gap: 10px;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    height: 400px;
+}
+
+.grid-item{
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 30px;
+    text-align: center;
+    border:1px solid white;
+}
+
+#item1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#item2 {
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.item8 {
+    /*grid-row-start grid-column-start grid-row-end grid-column-end*/
+    grid-area: 1 / 2 / 5 / 6;
+    /*grid-area: 2 / 1 / span 2 / span 3; */
+}
+
+.grid-container2 {
+    margin-top: 10px;
+    /*grid is block level, while inline-grid is another level*/
+    display: grid;
+    background-color: #2196F3;
+    /* Make "myArea" span two columns and two rows:*/
+    grid-template-areas: 'myArea myArea . . .' 'myArea myArea . . .';
+    /*gap: rowpx colpx;*/
+    row-gap: 10px;
+    column-gap: 10px;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+}
+
+.grid-item2{
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 30px;
+    text-align: center;
+    /*height: 100px;*/
+    border:1px solid white;
+}
+
+#item22{
+    grid-area: myArea;
+}
+
+/* flex property is a shorthand property for
+expand the items to take the available space equally between them
+flex-grow (tells the thing to grow with relations to its siblings, flex-shrink, flex basis
+if flex = 1
+	0 1 auto
+ */
+
+.try {
+    display: flex;
+    background-color: cadetblue;
+    margin-top: 10px;
+    width: 100px;
+}
+#app {
+    /* because flex-basis is auto, height and width not supply,
+    the item is going to make the container grow if too much
+    the item is going to make the container shrink if too little*/
+    flex-basis: auto;
+    background-color: #f1f1f1;
+}

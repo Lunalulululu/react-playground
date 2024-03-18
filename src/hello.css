@@ -1,0 +1,132 @@
+/* h1 is type selector or element selector, color is property, red is value
+this keyValue color:red is called declaration
+*/
+h1 {
+    color: red;
+}
+
+/*
+  Selector: select html element you want to style
+  Simple selector (select elements based on name, id, class. e.g., type selector or element selector / class selector / name selector)
+  Combinator selector: descendant (space), child (>), adjacent sibling(+), general sibling (~)
+  Pseudo class selector (link, visited, hover, active: the state where the thing is being pressed) : style element on hover, style visit links and unvisited links, on focus
+  :first-child pseudo-class matches a specified element that is the first child of another element.
+  Pseudo elements selector - style the first letter, line or element; insert content before, after, the content of an element
+  Attribute selectors (select elements based on an attribute or attribute value)
+ */
+selector::pseudo-element {
+
+}
+
+#lu {
+    color:blue;
+}
+
+.moon {
+    color: orange;
+}
+
+div select {
+    color: yellow;
+}
+
+form > label {
+    color: purple;
+}
+
+p + label {
+    color: red;
+}
+
+p ~ label {
+    color: grey;
+}
+
+a:link{
+    color: red;
+}
+
+a:visited{
+    color: blue;
+}
+
+a:hover{
+    color: orange;
+}
+
+a:active{
+    color: pink;
+}
+
+#seven p{
+    display:none;
+}
+
+#seven:hover p {
+    display:block;
+}
+
+#seven h1:first-child {
+    color:purple;
+}
+/* apply styles to
+an `<i>` element with a `lang` attribute value of "no*/
+i:lang(no){
+    color: red
+}
+
+#checkbox:checked + label{
+    color: red;
+}
+
+#checkbox:checked {
+    height:30px;
+    width:30px;
+}
+
+#haha > p::first-line {
+    color: indianred;
+}
+
+#haha > p::first-letter {
+    color: hotpink;
+}
+
+::marker{
+    color:cornflowerblue;
+}
+
+#haha > p::selection {
+    color: indianred;
+    background: #61dafb;
+    cursor: pointer;
+    outline: 10px darkslateblue;
+}
+
+a[target="_blank"] {
+    color: saddlebrown;
+}
+
+i[lang="no"] {
+    color: blueviolet;
+}
+
+ol li[id~="eight"] {
+    color: lightsalmon;
+}
+
+ol li[id|="eight"]{
+    color: #61dafb;
+}
+
+ol li[id^="eight"]{
+    color: mistyrose;
+}
+
+ol li[id$="egg"]{
+    color: green;
+}
+input[type="button"]{
+    font-size:20px;
+}
+

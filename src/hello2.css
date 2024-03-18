@@ -1,0 +1,28 @@
+
+/* auto: browser calculates the margin,
+length: specify an exact number
+% specify a margin in % of the width of the containing element
+: it is always calculated relative to the width of its parent element
+ */
+.my-home {
+    border: 1px solid dodgerblue;
+    background-color: lightblue;
+    margin: 20%;
+    /* margin-top   margin-right margin-bottom  margin-left */
+    /* margin-top   margin-left/margin-right    margin-bottom */
+    /* margin-top/margin-bottom   margin-left/margin-right */
+
+    /*width: auto is different, it means the div will shrink or expand to accoumante*/
+    /*all the text within*/
+}
+
+.your-home {
+    border: 1px solid dodgerblue;
+    background-color: lightblue;
+    /* The `auto` value for the margin property
+     is used for centering block elements horizontally
+     within their parent element. if this element has width, it is going
+     to use parent container - width / 2 for each margin*/
+    margin: auto;
+}
+
